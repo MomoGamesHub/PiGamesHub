@@ -1,18 +1,22 @@
-// دالة لإنشاء المربعات الـ 81
-function createGrid() {
-    const grid = document.getElementById('sudoku-grid');
-    for (let i = 0; i < 81; i++) {
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.maxLength = 1; // رقم واحد فقط في المربع
-        grid.appendChild(input);
-    }
+const grid = document.getElementById('sudoku-grid');
+
+// إنشاء 81 مربع وإضافتها للشبكة
+for (let i = 0; i < 81; i++) {
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.classList.add('cell');
+    grid.appendChild(input);
 }
 
-// تنفيذ الدالة عند تحميل الصفحة
-window.onload = createGrid;
-
-// دالة التحقق من الحل (سنكملها لاحقاً)
+// دالة التحقق البسيطة
 document.getElementById('check-btn').addEventListener('click', () => {
-    alert("جارٍ التحقق من القوانين...");
+    const cells = document.querySelectorAll('.cell');
+    let filledCount = 0;
+    cells.forEach(cell => { if (cell.value !== "") filledCount++; });
+    
+    if (filledCount === 81) {
+        alert("تم ملء الشبكة! جاري التحقق من النتائج...");
+    } else {
+        alert("يرجى ملء جميع الخانات أولاً.");
+    }
 });
