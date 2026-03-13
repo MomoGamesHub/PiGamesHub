@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لعبة السودوكو - Sudoku Game</title>
-    
+    <title>لعبة السودوكو</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="game-container">
+    <div class="container">
         <h1>لعبة السودوكو</h1>
         
-        <div id="sudoku-grid"></div>
+        <div id="sudoku-grid" class="sudoku-grid"></div>
 
-        <div class="actions">
+        <div class="controls">
             <button id="check-btn">تحقق من الحل</button>
-            <button id="reset-btn" onclick="location.reload()">إعادة تعيين</button>
+            <button onclick="location.reload()">إعادة تعيين</button>
         </div>
     </div>
 
