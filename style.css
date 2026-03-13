@@ -1,32 +1,30 @@
-/* تنسيق عام للموقع */
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    background-color: #f4f4f4;
-}
-
-/* حاوية اللعبة */
-.game-container {
-    width: 95%;
-    max-width: 400px;
-    margin-top: 20px;
-}
+/* تنسيق الصفحة العام */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; padding: 20px; }
+.container { text-align: center; }
 
 /* شبكة السودوكو */
-#sudoku-grid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr); /* 9 أعمدة متساوية */
-    gap: 2px;
-    background-color: #333; /* لون الخطوط الفاصلة */
-    border: 2px solid #333;
+.sudoku-grid { 
+    display: grid; 
+    grid-template-columns: repeat(9, 35px); 
+    grid-template-rows: repeat(9, 35px); 
+    gap: 1px; 
+    background-color: #333; 
+    border: 3px solid #333;
+    margin: 20px auto;
 }
 
-#sudoku-grid input {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* مربع */
-    text-align: center;
-    font-size: 1.2rem;
-    border: none;
-    outline: none;
+/* المربعات المدخلة */
+.cell { 
+    width: 35px; height: 35px; text-align: center; font-size: 18px; border: none; outline: none; background: white;
 }
+
+/* تقسيم الشبكة لـ 3x3 */
+.cell:nth-child(3n) { border-left: 2px solid #333; }
+.cell:nth-child(9n) { border-left: none; }
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) { border-bottom: 2px solid #333; }
+
+/* الأزرار */
+.controls { margin-top: 20px; }
+button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px; }
+button:hover { background: #218838; }
