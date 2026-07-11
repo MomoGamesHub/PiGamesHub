@@ -1,6 +1,6 @@
 const grid = document.getElementById('sudoku-grid');
 
-// إنشاء 81 مربع وإضافتها للشبكة
+// إنشاء 81 مربع
 for (let i = 0; i < 81; i++) {
     const input = document.createElement('input');
     input.type = 'number';
@@ -8,7 +8,7 @@ for (let i = 0; i < 81; i++) {
     grid.appendChild(input);
 }
 
-// دالة التحقق البسيطة
+// دالة التحقق
 document.getElementById('check-btn').addEventListener('click', () => {
     const cells = document.querySelectorAll('.cell');
     let filledCount = 0;
