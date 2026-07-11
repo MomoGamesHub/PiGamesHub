@@ -1,8 +1,8 @@
 /* تنسيق الصفحة العام */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; padding: 20px; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; padding: 20px; }
 .container { text-align: center; }
 
-/* شبكة السودوكو */
+/* شبكة السودوكو - متوافقة مع جوالك */
 .sudoku-grid { 
     display: grid; 
     grid-template-columns: repeat(9, 35px); 
@@ -13,7 +13,6 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-
     margin: 20px auto;
 }
 
-/* المربعات المدخلة */
 .cell { 
     width: 35px; height: 35px; text-align: center; font-size: 18px; border: none; outline: none; background: white;
 }
@@ -25,6 +24,6 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-
 .cell:nth-child(n+46):nth-child(-n+54) { border-bottom: 2px solid #333; }
 
 /* الأزرار */
-.controls { margin-top: 20px; }
-button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px; }
-button:hover { background: #218838; }
+.controls { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
+button { padding: 10px 15px; font-size: 14px; cursor: pointer; background: #6d28d9; color: white; border: none; border-radius: 5px; }
+button:hover { background: #4c1d95; }
